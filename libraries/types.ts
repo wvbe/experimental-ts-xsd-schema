@@ -35,3 +35,7 @@ export type SchemaDefinition = {
 	id: string;
 	root: SchemaElement;
 };
+
+export type Jsonml<
+	Attrs extends { [attr: string]: unknown } = { [attr: string]: string | undefined },
+> = string | [string, ...Jsonml<Attrs>[]] | [string, Attrs, ...Jsonml<Attrs>[]];

@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"test": "deno test libraries/*.test.ts"
+		"test": "deno test test.ts"
 	},
 	"devDependencies": {
 		"@wvbe/eslint-config": "github:wvbe/eslint-config",

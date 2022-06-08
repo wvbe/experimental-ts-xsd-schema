@@ -5,7 +5,7 @@ import {
 	SchemaContentModelUnordered,
 	SchemaDefinition,
 	SchemaElement,
-} from './schemaBuilder.types.ts';
+} from './types.ts';
 import { formatTypeScript } from './utilities.ts';
 
 function $constraint(constraint: SchemaAttributeConstraints) {
@@ -81,6 +81,6 @@ function $element(element: SchemaElement) {
 	return str;
 }
 
-export function toType(schema: SchemaDefinition) {
+export default function toTypeScript(schema: SchemaDefinition) {
 	return formatTypeScript(`export type Schema = ${$element(schema.root)}`);
 }
